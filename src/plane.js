@@ -1,12 +1,12 @@
 function Plane() {
-  // this.isFlying = function(){
-  //
-  // };
-  // this.isFlying() = false
+   this.isFlying = false
 }
 
 
 
 Plane.prototype.takeOff = function () {
+  if ( this.isFlying == true ) {
+    throw "Plane already flying";
+  };
   this.isFlying = true;
 };
