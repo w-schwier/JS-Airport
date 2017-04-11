@@ -12,5 +12,8 @@ Plane.prototype.takeOff = function () {
 };
 
 Plane.prototype.land = function () {
+  if ( this.isFlying == false ) {
+    throw "Plane already landed";
+  };
   this.isFlying = false;
 };
